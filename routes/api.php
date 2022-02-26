@@ -33,15 +33,16 @@ Route::get('alluser',[
 
 
 Route::middleware('auth:sanctum')->group(function (){
-    Route::get('user',[
+    Route::get('verify',[
         \App\Http\Controllers\AuthController::class,
-        'user'
+        'verify'
     ]);
-    Route::post('logout',[
+    Route::get('logout',[
         \App\Http\Controllers\AuthController::class,
         'logout'
     ]);
 });
+
 
 
 

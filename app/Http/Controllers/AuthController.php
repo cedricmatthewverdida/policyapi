@@ -67,11 +67,12 @@ class AuthController extends Controller
 
     }
 
-    public function user(){
-        return response ([
-            'auth' => Auth::user()
+    public function verify (){
+        return response([
+            'user' => Auth::user()
         ]);
     }
+
 
 
     public function logout(){
