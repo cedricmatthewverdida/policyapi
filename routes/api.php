@@ -21,6 +21,10 @@ Route::post('register',[
     'register'
 ]);
 
+
+
+
+
 Route::post('login',[
     \App\Http\Controllers\AuthController::class,
     'login'
@@ -47,4 +51,5 @@ Route::middleware('auth:sanctum')->group(function (){
 
 
 Route::resource('/category','CategoryController');
+Route::resource('/comment','CommentController');
 Route::resource('/post','PostController');
